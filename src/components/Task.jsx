@@ -15,7 +15,7 @@ class Task extends Component {
   };
 
   render() {
-    const { value } = this.props;
+    const { value, onDelete, id } = this.props;
     return (
       <React.Fragment>
         <li className="collection-item">
@@ -27,7 +27,7 @@ class Task extends Component {
             />
             <span>{value}</span>
           </label>
-          <a href="#!" className="secondary-content">
+          <a href="#!" className="secondary-content" onClick={ () => { onDelete(id) } }>
             <i className="material-icons">delete</i>
           </a>
         </li>
